@@ -9,38 +9,15 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
+// Importar contexto e tipos do arquivo separado
+import { AnalisePredicContext, PerfilUsuario, EstadoGlobal } from './context'
+
 // Importar seções específicas
 import DashboardPreditivo from './dashboard-preditivo'
 import CentralAlertas from './central-alertas'
 import AnaliseIndividual from './analise-individual'
 import AnaliseCohorts from './analise-cohorts'
 import ConfiguracaoModelos from './configuracao-modelos'
-
-// Tipos para o contexto global
-interface PerfilUsuario {
-  id: string
-  nome: string
-  tipo: 'executivo' | 'rh_estrategico' | 'rh_operacional' | 'gestor' | 'data_scientist'
-  departamento: string
-  permissoes: string[]
-}
-
-interface EstadoGlobal {
-  departamentoSelecionado: string
-  periodoSelecionado: string
-  filtrosGlobais: {
-    departamentos: string[]
-    cargos: string[]
-    faixasRisco: string[]
-  }
-}
-
-// Context para compartilhar estado entre seções
-const AnalisePredicContext = React.createContext<{
-  perfilUsuario: PerfilUsuario
-  estadoGlobal: EstadoGlobal
-  atualizarFiltrosGlobais: (filtros: Partial<EstadoGlobal['filtrosGlobais']>) => void
-} | null>(null)
 
 export default function AnalisePredictivaPage() {
   // Estados de navegação

@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Progress } from "@/components/ui/progress"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { useAnalisePredicContext } from './page'
+import { useAnalisePredicContext } from './context'
 
 // Tipos específicos
 interface ColaboradorDetalhado {

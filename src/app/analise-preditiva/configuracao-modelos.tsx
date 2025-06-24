@@ -12,7 +12,7 @@ import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
-import { useAnalisePredicContext } from './page'
+import { useAnalisePredicContext } from './context'
 
 // Tipos específicos
 interface ModeloPreditivo {
