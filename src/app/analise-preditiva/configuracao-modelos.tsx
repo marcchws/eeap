@@ -64,10 +64,16 @@ interface ModalNovoModeloProps {
 
 // Componente Modal Novo Modelo
 function ModalNovoModelo({ isOpen, onClose, onSalvar }: ModalNovoModeloProps) {
-  const [dados, setDados] = useState({
+  const [dados, setDados] = useState<{
+    nome: string;
+    tipo: 'principal' | 'segmentado' | 'especializado';
+    algoritmo: 'random_forest' | 'gradient_boosting' | 'neural_network' | 'ensemble';
+    segmentoAlvo: string;
+    observacoes: string;
+  }>({
     nome: '',
-    tipo: 'segmentado' as const,
-    algoritmo: 'random_forest' as const,
+    tipo: 'segmentado',
+    algoritmo: 'random_forest',
     segmentoAlvo: '',
     observacoes: ''
   })
