@@ -133,7 +133,7 @@ const obterIconeAlerta = (tipo: string) => {
     case 'turnover_alto': return LucideIcons.TrendingDown;
     case 'risco_colaboradores': return LucideIcons.AlertTriangle;
     case 'enps_baixo': return LucideIcons.ThumbsDown;
-    default: return LucideIcons.Alert;
+    default: return LucideIcons.AlertTriangle;
   }
 };
 

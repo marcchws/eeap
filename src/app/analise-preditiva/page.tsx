@@ -330,12 +330,3 @@ export default function AnalisePredictivaPage() {
     </AnalisePredicContext.Provider>
   )
 }
-
-// Hook para usar o context
-export const useAnalisePredicContext = () => {
-  const context = React.useContext(AnalisePredicContext)
-  if (!context) {
-    throw new Error('useAnalisePredicContext deve ser usado dentro de AnalisePredicContext.Provider')
-  }
-  return context
-}
